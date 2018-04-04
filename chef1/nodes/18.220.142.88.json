@@ -33,6 +33,6 @@
     "recipe[openssh]"
   ],
   "automatic": {
-    "ipaddress": "18.219.34.158"
+    "ipaddress": "18.220.142.88"
   }
 }
