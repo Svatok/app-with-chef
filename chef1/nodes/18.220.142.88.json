@@ -8,15 +8,6 @@
       "passwordless": "false"
     }
   },
-  "nodejs": {
-    "install_method": "binary",
-    "version": "7.7.4",
-    "binary": {
-      "checksum": {
-        "linux_x64": "c1eda5dd5e5b5bce83edaaa4e2eb0ef9ea73dee55ca95ad6f8d0c43d162814d0"
-      }
-    }
-  },
   "nginx": {
     "version": "1.11.13",
     "default_site_enabled": false,
@@ -25,9 +16,6 @@
       "checksum": "360b601ef8ed2998c80fa56a27bf3cd745c3ce18c5fb10892e6595467b1415d3",
       "modules": ["nginx::http_gzip_static_module", "nginx::http_ssl_module"]
     }
-  },
-  "redis": {
-    "maxmemory": "256Mb"
   },
   "swap_tuning": {
     "minimum_size": 4096
@@ -41,12 +29,7 @@
     "recipe[sudo]",
     "recipe[users::sysadmins]",
     "recipe[swap_tuning]",
-    "recipe[ruby]",
-    "recipe[imagemagick::devel]",
-    "recipe[nodejs]",
-    "recipe[redis::server]",
     "recipe[nginx-config]",
-    "recipe[postgresql]",
     "recipe[openssh]"
   ],
   "automatic": {
