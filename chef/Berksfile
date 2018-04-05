@@ -1,7 +1,7 @@
 source 'https://supermarket.chef.io'
 
 # cookbook 'imagemagick'
-# cookbook 'nginx'
+cookbook 'nginx'
 # cookbook 'nodejs'
 # cookbook 'openssh'
 # cookbook 'postgresql_lwrp'

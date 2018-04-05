@@ -1,11 +1,28 @@
 DEPENDENCIES
+  nginx
   sudo
   swap_tuning
   users
 
 GRAPH
+  build-essential (8.1.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  mingw (2.0.2)
+    seven_zip (>= 0.0.0)
+  nginx (8.1.2)
+    build-essential (>= 0.0.0)
+    ohai (>= 4.1.0)
+    yum-epel (>= 0.0.0)
+    zypper (>= 0.0.0)
+  ohai (5.2.2)
+  seven_zip (2.0.2)
+    windows (>= 1.2.2)
   sudo (3.3.1)
   swap (0.3.8)
   swap_tuning (0.2.0)
     swap (~> 0.3)
   users (4.0.3)
+  windows (4.1.4)
+  yum-epel (3.1.0)
+  zypper (0.4.0)
