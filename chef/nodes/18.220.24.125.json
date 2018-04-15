@@ -24,6 +24,7 @@
     "recipe[sudo]",
     "recipe[users::sysadmins]",
     "recipe[swap_tuning]",
+    "recipe[ruby]",
     "recipe[nginx-config]"
   ],
   "automatic": {

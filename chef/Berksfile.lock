@@ -1,5 +1,6 @@
 DEPENDENCIES
   nginx
+  ruby_build
   sudo
   swap_tuning
   users
@@ -8,6 +9,8 @@ GRAPH
   build-essential (8.1.1)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
+  git (9.0.0)
+    build-essential (>= 5.0.0)
   mingw (2.0.2)
     seven_zip (>= 0.0.0)
   nginx (8.1.2)
@@ -16,6 +19,9 @@ GRAPH
     yum-epel (>= 0.0.0)
     zypper (>= 0.0.0)
   ohai (5.2.2)
+  ruby_build (1.1.0)
+    git (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   seven_zip (2.0.2)
     windows (>= 1.2.2)
   sudo (3.3.1)
