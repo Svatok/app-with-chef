@@ -25,7 +25,8 @@
     "recipe[users::sysadmins]",
     "recipe[swap_tuning]",
     "recipe[ruby]",
-    "recipe[nginx-config]"
+    "recipe[nginx-config]",
+    "recipe[deploy]"
   ],
   "automatic": {
     "ipaddress": "18.220.24.125"
