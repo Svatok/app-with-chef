@@ -20,12 +20,20 @@
   "swap_tuning": {
     "minimum_size": 4096
   },
+  "openssh": {
+    "server": {
+      "password_authentication": "no"
+    }
+  },
   "run_list": [
     "recipe[sudo]",
     "recipe[users::sysadmins]",
+    "recipe[locale]",
     "recipe[swap_tuning]",
     "recipe[ruby]",
     "recipe[nginx-config]",
+    "recipe[postgresql]",
+    "recipe[openssh]",
     "recipe[deploy]"
   ],
   "automatic": {
