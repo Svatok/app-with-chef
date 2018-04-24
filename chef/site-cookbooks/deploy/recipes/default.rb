@@ -1,10 +1,12 @@
+# encrypted_data = Chef::EncryptedDataBagItem.load('configs', node.environment)
+
 config = node['project']
 deployer = config['user']
 
 root_path = config['root']
 shared_path = File.join(root_path, 'shared')
 bundle_path = File.join(shared_path, 'vendor', 'bundle')
-config_path = File.join(shared_path, 'config')
+# config_path = File.join(shared_path, 'config')
 ssh_path = File.join(shared_path, '.ssh')
 
 puma_state_file = File.join(shared_path, 'tmp', 'pids', 'puma.state')
@@ -41,6 +43,32 @@ end
   end
 end
 
+# template File.join(config_path, 'database.yml') do
+#   source File.join(node.environment, 'database.yml.erb')
+#   variables(
+#     environment: node.environment,
+#     database: encrypted_data['database']['name'],
+#     user: encrypted_data['database']['user'],
+#     password: encrypted_data['database']['password']
+#   )
+#   sensitive true
+#   owner deployer
+#   group deployer
+#   mode 0o644
+# end
+
+template File.join(shared_path, 'puma.rb') do
+  source File.join(node.environment, 'puma.rb.erb')
+  variables(
+    environment: node.environment,
+    project_root: root_path
+  )
+  owner deployer
+  group deployer
+  mode 0o644
+end
+
+# rubocop:disable Metrics/BlockLength
 timestamped_deploy node['app_name'] do
   ssh_wrapper ssh_wrapper_file
   repository config['repository']
@@ -102,7 +130,6 @@ timestamped_deploy node['app_name'] do
   end
 
   before_restart do
-    # execute "cd #{release_path}/client && yarn install && yarn build"
     execute 'bundle exec rake assets:precompile' do
       command "/bin/bash -lc 'RAILS_ENV=production bundle exec rake assets:precompile'"
       cwd release_path
