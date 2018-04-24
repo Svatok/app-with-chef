@@ -57,16 +57,6 @@ template File.join(config_path, 'database.yml') do
   mode 0o644
 end
 
-# template File.join(shared_path, 'puma.rb') do
-#   source File.join(node.environment, 'puma.rb.erb')
-#   variables(
-#     environment: node.environment,
-#     project_root: root_path
-#   )
-#   owner deployer
-#   group deployer
-#   mode 0o644
-# end
 
 # rubocop:disable Metrics/BlockLength
 timestamped_deploy node['app_name'] do
@@ -85,7 +75,7 @@ timestamped_deploy node['app_name'] do
   create_dirs_before_symlink %w[tmp public]
 
   symlinks(
-    'config' => 'config',
+    'config/database.yml' => 'config/database.yml',
     'log' => 'log',
     'public/system' => 'public/system',
     'public/uploads' => 'public/uploads',
@@ -95,17 +85,10 @@ timestamped_deploy node['app_name'] do
   )
 
   symlink_before_migrate(
-    # 'config/secrets.yml.key' => 'config/secrets.yml.key',
     'config/database.yml' => 'config/database.yml'
   )
 
   before_migrate do
-    # file maintenance_file do
-    #   owner deployer
-    #   group deployer
-    #   action :create
-    # end
-
     execute 'install bundler' do
       command "/bin/bash -lc 'gem install bundler'"
       cwd release_path
