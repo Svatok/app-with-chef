@@ -1,30 +1,65 @@
 DEPENDENCIES
+  chef_rvm
+  imagemagick
   locale
   nginx
+  nodejs
   openssh
   postgresql_lwrp
-  ruby_build
   sudo
   swap_tuning
   users
 
 GRAPH
   apt (7.0.0)
+  ark (3.1.0)
+    build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+    windows (>= 0.0.0)
   build-essential (8.1.1)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
+  chef_gem (0.1.0)
+  chef_rvm (2.0.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    chef_gem (>= 0.0.0)
+    curl (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    java (>= 0.0.0)
+    maven (>= 0.0.0)
+    mono (>= 0.0.0)
+    nodejs (>= 0.0.0)
+    sudo (>= 0.0.0)
   cron (5.1.0)
+  curl (2.0.4)
   git (9.0.0)
     build-essential (>= 5.0.0)
+  homebrew (5.0.4)
+  imagemagick (0.2.3)
   iptables (4.3.4)
+  java (1.50.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
   locale (2.0.1)
+  maven (5.1.0)
+    ark (>= 1.0)
   mingw (2.0.2)
     seven_zip (>= 0.0.0)
+  mono (0.1.2)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    yum (>= 0.0.0)
   nginx (8.1.2)
     build-essential (>= 0.0.0)
     ohai (>= 4.1.0)
     yum-epel (>= 0.0.0)
     zypper (>= 0.0.0)
+  nodejs (5.0.0)
+    ark (>= 2.0.2)
+    build-essential (>= 0.0.0)
   ohai (5.2.2)
   openssh (2.6.3)
     iptables (>= 1.0)
@@ -41,9 +76,6 @@ GRAPH
     apt (>= 0.0.0)
     cron (>= 0.0.0)
     poise-python (~> 1.6.0)
-  ruby_build (1.1.0)
-    git (>= 0.0.0)
-    yum-epel (>= 0.0.0)
   seven_zip (2.0.2)
     windows (>= 1.2.2)
   sudo (3.3.1)
@@ -52,5 +84,6 @@ GRAPH
     swap (~> 0.3)
   users (4.0.3)
   windows (4.1.4)
+  yum (5.1.0)
   yum-epel (3.1.0)
   zypper (0.4.0)
