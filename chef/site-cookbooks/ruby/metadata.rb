@@ -6,4 +6,5 @@ description      'Ruby configuration'
 long_description 'Ruby configuration'
 version          '0.1.0'
 
-depends 'ruby_build'
+depends 'deploy'
+depends 'chef_rvm'
