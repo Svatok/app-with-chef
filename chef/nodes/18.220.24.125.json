@@ -31,6 +31,8 @@
     "recipe[locale]",
     "recipe[swap_tuning]",
     "recipe[ruby]",
+    "recipe[imagemagick::devel]",
+    "recipe[nodejs]",
     "recipe[nginx-config]",
     "recipe[postgresql]",
     "recipe[openssh]",
