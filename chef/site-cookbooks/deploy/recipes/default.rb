@@ -43,6 +43,18 @@ end
   end
 end
 
+template File.join(config_path, 'application.yml') do
+  source File.join(node.environment, 'application.yml.erb')
+  variables(
+    environment: node.environment,
+    secret_key: encrypted_data['application_yml']['secret_key']
+  )
+  sensitive true
+  owner deployer
+  group deployer
+  mode 0o644
+end
+
 template File.join(config_path, 'database.yml') do
   source File.join(node.environment, 'database.yml.erb')
   variables(
