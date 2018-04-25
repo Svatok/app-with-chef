@@ -1,8 +1,14 @@
 {
   "id": "production",
   "database": {
-    "encrypted_data": "v+sIDwy2alzv1dKvHLGsR7HNykf+5Z44/zDIqxGibuaSdXP0nfC0kFHtW8oT\nEHeL5fI108L/V8Ygzs/vrPZlBYHRuiX/U2WHpTLOKU6KpQzCIaM7IZiDOzT3\noXhXfrda\n",
-    "iv": "TPIi3Li/NMXISJHd95Cu6g==\n",
+    "encrypted_data": "nKK+1PgvEGAthpYnvb1FpcKDgCa5FXjUU0zfDb+t5+bp/sHxPwCXRn29PTDO\nhmoR3t/MRsV+n+pH/2PG2LEjUjYlPLjBKqDYLLJpy1U5K8hHFIPNdRGliSOx\nwQ/yfyFr\n",
+    "iv": "QINl3aJb/wRgWb1kU7JMhQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "application_yml": {
+    "encrypted_data": "6kD+WOWAg6OS7i3x7Bq9QEK9J6/icjvN5BAvOKCyFlMLzL/Mdg9LeQ+rXb2W\ndDjZvBU9BBBWLzaP4MGpcv+0tcU8O3GWzs+OGKjMjcS5x4U76BDHL9Alsgmc\np6lm5KWBUUPpLybmDPjW7cEtIKyNWoyjO8Gn68gr4AaMFit5/5s4lXB54jPV\nkCFcl41mM9QajTWEbAf02hkxsiV3wdA9PXcoAFxweeDMcK37GL5NH/k=\n",
+    "iv": "cZVnKo+k/lw4Sl9M4BhCDg==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   }
