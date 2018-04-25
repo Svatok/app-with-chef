@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  user: pguser
-  password: pguser_password
+  user: rails_dev
+  password: aqwe123
   pool: 5
 
 development:
